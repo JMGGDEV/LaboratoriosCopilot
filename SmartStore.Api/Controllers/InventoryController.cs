@@ -40,6 +40,10 @@ public sealed class InventoryController(IInventoryService inventoryService) : Co
 		Guid id,
 		[FromQuery] int quantity)
 	{
+		if (quantity <= 0)
+		{
+			return BadRequest("La cantidad a descontar debe ser mayor a 0.");
+		}
 		var product = await inventoryService.GetByIdAsync(id);
 		if (product is null)
 		{
