@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SmartStore.Api/SmartStore.Api.csproj" />
+  <Project Path="SmartStore.Tests/SmartStore.Tests.csproj" />
+</Solution>
